@@ -1,0 +1,201 @@
+* { box-sizing: border-box;}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f2ee;
+}
+
+/* header */
+.header {
+  width: 100%;
+  background: #121e33c4;
+  font-size: 1.2rem;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+
+.header a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  color: #ce9a55;
+}
+
+@media (min-width: 640px) {
+  .header a {
+    font-size: 20px;
+  }
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.main-media {
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .main-media {
+    height: 24rem;
+  }
+}
+
+.media-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-details {
+  background-color: #f3f4f6;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#more{
+  display: none;
+}
+
+.details-content {
+  padding: 1rem;
+}
+
+.details-btn {
+  text-decoration: none;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: #121e33;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.details-btn:hover {
+  background-color: #314972;
+}
+
+/* General Dialog Container */
+.dialog-container {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  background: radial-gradient(circle at 10% 20%, rgb(215, 223, 252) 0%, rgb(255, 255, 255) 0%, rgb(215, 223, 252) 84%);
+  padding: 24px;
+  margin: 20px auto;
+}
+
+/* Title */
+.dialog-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: #314972;
+  outline: none;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  text-align: center;
+  display: block;
+  /* width: 100%; */
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #999999; /* Green-500 */
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;}
+
+.btn-cancel:hover {
+  background-color: #4b5563; /* Darker Gray */
+}
+
+.btn-submit:hover {
+  background-color: #0056b3; /* Darker Blue */
+}
+
+.footer {
+  background-color: #121e33c4;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}

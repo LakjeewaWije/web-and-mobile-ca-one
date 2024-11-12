@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Listings</title>
+    <link rel="stylesheet" href="details.css">
+    <link href="fonts.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="header">
+        <a href="/" class="logo poppins-bold">BestRealtors</a>
+    </nav>
+
+    <div class="content">
+        <!-- Main content -->
+        <main class="main-content">
+            <div>
+                <img src="https://halfmoonyoga.ie/wp-content/uploads/2023/11/Colombia.png" alt="Main Media"
+                    class="main-media" />
+            </div>
+
+            <!-- Media thumbnails -->
+            <div class="media-thumbnails">
+                <img src="https://i.etsystatic.com/12434689/r/il/114442/5167986792/il_1588xN.5167986792_q4vn.jpg"
+                    alt="Media 1" class="thumbnail" />
+                <img src="https://t4.ftcdn.net/jpg/02/91/73/39/360_F_291733984_oP3xyguAxTNQ0AM7dzrDCUgcPbkG71Vl.jpg"
+                    alt="Media 2" class="thumbnail" />
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20230912/pngtree-coffee-beans-on-a-wooden-table-surrounded-by-cup-image_13201096.png"
+                    alt="Media 3" class="thumbnail" />
+                <img src="https://t4.ftcdn.net/jpg/02/91/73/39/360_F_291733984_oP3xyguAxTNQ0AM7dzrDCUgcPbkG71Vl.jpg"
+                    alt="Media 4" class="thumbnail" />
+                <img src="https://i.etsystatic.com/12434689/r/il/114442/5167986792/il_1588xN.5167986792_q4vn.jpg"
+                    alt="Media 5" class="thumbnail" />
+            </div>
+        </main>
+
+        <!-- Details of the property -->
+        <div class="property-details">
+            <div class="details-content">
+                <h2>Studio Coffee</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate tortor at ipsum efficitur
+                </p>
+                <p><strong>Origin:</strong> Columbia</p>
+                <p><strong>Roasted In:</strong> Wicklow</p>
+                <p><strong>Type:</strong> Whole Bean</p>
+                <p><strong>Caffeinated:</strong> Yes</p>
+                <button id="openDialogBtn" class="details-btn">Book A Viewing</button>
+            </div>
+        </div>
+    </div>
+    <!-- Booking Form -->
+    <dialog id="myDialog" class="dialog-container">
+        <h2 class="dialog-title">Booking Form</h2>
+        <form action="#" method="dialog" class="form-container">
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email"
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" id="date" name="date" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" id="time" name="time" class="form-input" required />
+            </div>
+            <div class="form-actions">
+                <button id="closeDialogBtn" type="button" class="btn-cancel">Cancel</button>
+                <button type="submit" class="details-btn" onclick="alert('Booking Confirmed!')">Book Now</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Built by : Lakjeewa Wijebandara (20054325) | Dilusha Fernando (xxxxx)</p>
+    </footer>
+    <script src="details.js"></script>
+</body>
+
+</html>
