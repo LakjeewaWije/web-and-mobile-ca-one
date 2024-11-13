@@ -14,18 +14,20 @@ async function init() {
     console.log("rentDetails ", rentDetails);
 
     // Get references to the dialog and buttons
-    const dialog = document.getElementById('myDialog');
-    const openBtn = document.getElementById('openDialogBtn');
-    const closeBtn = document.getElementById('closeDialogBtn');
+
+    const dialog = $('#myDialog');
+    const openBtn = $('#openDialogBtn');
+    const closeBtn = $('#closeDialogBtn');
 
     // Open the dialog when the button is clicked
-    openBtn.addEventListener('click', () => {
-        dialog.showModal(); // Use showModal() for a modal dialog
+    openBtn[0].addEventListener('click', () => {
+        // dialog.showModal(); // Use showModal() for a modal dialog
+        dialog[0].showModal();
     });
 
     // Close the dialog when the close button is clicked
-    closeBtn.addEventListener('click', () => {
-        dialog.close();
+    closeBtn[0].addEventListener('click', () => {
+        dialog[0].close();
     });
 }
 init();
@@ -83,15 +85,21 @@ function appendRentDetails(data) {
     detailsContainer.append(detailsHTML)
 }
 
+function setMainImage(img) {
+    let mainImage = $('.main-media');
+    mainImage.attr("src", img);
+}
+
 function appendRentImages(mainMedia, otherImages) {
     let mainImage = $('.main-media');
     let otherImagesContainer = $('.media-thumbnails');
     otherImagesContainer.empty();
     mainImage.attr("src", mainMedia);
-    let otherImagesContent = ``;
+    otherImagesContainer.append(`<img src="${mainMedia}" onclick="setMainImage(this.src)"
+                    alt="Media 1" class="thumbnail" />`)
     otherImages.forEach(element => {
         console.log("element ", element)
-        let html = `<img src="${element.src}"
+        let html = `<img src="${element.src}" onclick="setMainImage(this.src)"
                     alt="Media 1" class="thumbnail" />`
         otherImagesContainer.append(html)
     });

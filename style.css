@@ -1,7 +1,10 @@
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
+
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f2ee;
@@ -9,6 +12,9 @@ body {
 
 /* header */
 .header {
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 50;
   width: 100%;
   background: #121e33c4;
   font-size: 1.2rem;
@@ -25,6 +31,11 @@ body {
   line-height: 25px;
   border-radius: 4px;
   color: #ce9a55;
+}
+
+.header a>img {
+  border-radius: 15px;
+  height: 42px;
 }
 
 @media (min-width: 640px) {
@@ -56,7 +67,7 @@ body {
 .banner div {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -71,7 +82,7 @@ body {
 .content {
   width: 100%;
   flex: 1;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
 }
 
@@ -98,9 +109,39 @@ input[type=text]:focus {
   }
 }
 
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover,
+select:focus {
+  border-color: #007BFF;
+  background: #fff;
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.property-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Property Grid */
 .property-grid {
   display: grid;
+  width: 95%;
   grid-template-columns: 1fr;
   gap: 16px;
   padding: 16px;
@@ -179,9 +220,125 @@ input[type=text]:focus {
   background-color: #314972;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.filter-btn {
+  text-decoration: none;
+  /* margin-top: 16px; */
+  padding: 8px 16px;
+  background-color: #121e33;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #314972;
+}
+
+.clear-filter-btn {
+  text-decoration: none;
+  display: none;
+  /* margin-top: 16px; */
+  padding: 8px 16px;
+  background-color: #b42c3c;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clear-filter-btn:hover {
+  background-color: #db495a;
+}
+
+/* General Dialog Container */
+.dialog-container {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  background: radial-gradient(circle at 10% 20%, rgb(215, 223, 252) 0%, rgb(255, 255, 255) 0%, rgb(215, 223, 252) 84%);
+  padding: 24px;
+  margin: 20px auto;
+}
+
+/* Title */
+.dialog-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* dialog Actions */
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dialog-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.dialog-select {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dialog-select>label {
+  width: 10%;
+}
+
+.dialog-select>select {
+  width: 80%;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  text-align: center;
+  display: block;
+  /* width: 100%; */
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #999999;
+  /* Green-500 */
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #4b5563;
+  /* Darker Gray */
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  /* Darker Blue */
 }
 
 .footer {

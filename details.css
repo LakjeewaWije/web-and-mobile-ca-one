@@ -1,8 +1,10 @@
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f2ee;
@@ -10,6 +12,9 @@ body {
 
 /* header */
 .header {
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 50;
   width: 100%;
   background: #121e33c4;
   font-size: 1.2rem;
@@ -26,6 +31,11 @@ body {
   line-height: 25px;
   border-radius: 4px;
   color: #ce9a55;
+}
+
+.header a>img {
+  border-radius: 15px;
+  height: 42px;
 }
 
 @media (min-width: 640px) {
@@ -46,7 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding-top: 6rem;
 }
 
 .main-media {
@@ -66,6 +76,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+
+}
+
+.media-thumbnails img {
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.media-thumbnails img:hover {
+  transform: scale(1.02);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .thumbnail {
@@ -84,7 +105,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#more{
+#more {
   display: none;
 }
 
@@ -178,19 +199,23 @@ body {
   /* width: 100%; */
   margin-top: 1rem;
   padding: 0.5rem;
-  background-color: #999999; /* Green-500 */
+  background-color: #999999;
+  /* Green-500 */
   color: white;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.2s;}
+  transition: background-color 0.2s;
+}
 
 .btn-cancel:hover {
-  background-color: #4b5563; /* Darker Gray */
+  background-color: #4b5563;
+  /* Darker Gray */
 }
 
 .btn-submit:hover {
-  background-color: #0056b3; /* Darker Blue */
+  background-color: #0056b3;
+  /* Darker Blue */
 }
 
 .footer {
